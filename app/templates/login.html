@@ -1,19 +1,25 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Elite Digit Analyzer</title>
+    <title>Secure AI Login</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
+    <div class="container">
+        <h2>🔒 AI-Enhanced Login</h2>
+        <form action="{{ url_for('login') }}" method="POST">
+            <div class="input-group">
+                <input type="text" name="username" placeholder="👤 Username" required>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" placeholder="🔑 Password" required>
+            </div>
             <button type="submit">Login</button>
         </form>
+        <p>Unauthorized? <a href="mailto:youremail@example.com">Request Access</a></p>
     </div>
 </body>
 </html>
